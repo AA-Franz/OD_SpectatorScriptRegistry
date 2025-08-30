@@ -1,0 +1,23 @@
+name: Check Formatting and Schema
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Check JSON formatting
+        run: bunx @biomejs/biome format
+
+      - name: Validate registry.json against schema.json
+        run: bunx ajv-cli validate -s schema.json -d registry.json

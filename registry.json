@@ -1,0 +1,11 @@
+{
+	"$schema": "./schema.json",
+	"scripts": [
+		{
+			"name": "Example",
+			"description": "An example script to demonstrate the registry",
+			"author": "Another Axiom",
+			"url": "https://github.com/AA-Franz/OD_ExampleCameraScript.git"
+		}
+	]
+}
