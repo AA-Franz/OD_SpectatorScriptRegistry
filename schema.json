@@ -14,6 +14,9 @@
 					"name": {
 						"type": "string"
 					},
+					"displayName": {
+						"type": "string"
+					},
 					"description": {
 						"type": "string"
 					},
@@ -21,10 +24,11 @@
 						"type": "string"
 					},
 					"url": {
-						"type": "string"
+						"type": "string",
+						"pattern": "^https://github.com/.*\\.git$"
 					}
 				},
-				"required": ["name", "description", "author", "url"],
+				"required": ["name", "displayName", "author", "url"],
 				"additionalProperties": false
 			}
 		}

@@ -2,8 +2,9 @@
 	"$schema": "./schema.json",
 	"scripts": [
 		{
-			"name": "Example",
-			"description": "An example script to demonstrate the registry",
+			"name": "anotheraxiom.example",
+			"displayName": "Example",
+			"description": "Demonstration of the package format for spectaor camera scripts in Orion Drift",
 			"author": "Another Axiom",
 			"url": "https://github.com/AA-Franz/OD_ExampleCameraScript.git"
 		}
