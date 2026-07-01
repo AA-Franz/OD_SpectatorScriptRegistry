@@ -1,0 +1,17 @@
+{
+  "name": "od-spectator-registry",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "tsx src/validate.ts",
+    "format": "prettier --write .",
+    "lint": "prettier --check .",
+    "check": "npm run validate && npm run lint"
+  },
+  "dependencies": {
+    "@types/node": "^26.0.1",
+    "ajv": "^8.20.0",
+    "prettier": "^3.9.4",
+    "tsx": "^4.22.4"
+  }
+}

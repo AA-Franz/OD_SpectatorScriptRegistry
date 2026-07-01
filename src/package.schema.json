@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "Spectator Camera Script Package",
+  "description": "Manifest (package.json) for an Orion Drift spectator camera script.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "description": "Unique package id in reverse-domain form, e.g. \"anotheraxiom.example\"."
+    },
+    "displayName": {
+      "type": "string",
+      "description": "Human-friendly name shown in game."
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version, e.g. \"0.0.1\".",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "description": {
+      "type": "string"
+    },
+    "main": {
+      "type": "string",
+      "description": "Entry-point script file, relative to the repo root, e.g. \"main.luau\"."
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "author": {
+      "type": "string"
+    },
+    "defaultKeybind": {
+      "type": "string",
+      "description": "Optional key the script binds to by default."
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^https:\/\/github.com\/.+\/.+$"
+    }
+  },
+  "required": ["name", "displayName", "main", "author", "url", "version"],
+  "additionalProperties": true
+}
