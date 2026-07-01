@@ -15,19 +15,21 @@ This repository is the official registry of community spectator scripts for Orio
 
 ## Registry entry format
 
-Each script is an object in the `scripts` array of [`registry.json`](registry.json). The fields are validated against [`schema.json`](schema.json):
+Each script is an object in the `scripts` array of [`registry.json`](registry.json). The fields are validated against [`src/registry.schema.json`](src/registry.schema.json):
 
-| Field    | Description                                                            |
-| -------- | ---------------------------------------------------------------------- |
-| `name`   | Unique identifier of your camera package, e.g. `anotheraxiom.example`. |
-| `author` | Your name (Discord/Meta whatever, but something we can find you with). |
-| `url`    | Link to the GitHub repository (`https://github.com/<owner>/<repo>`).   |
+| Field         | Description                                                            |
+| ------------- | ---------------------------------------------------------------------- |
+| `name`        | Unique identifier of your camera package, e.g. `anotheraxiom.example`. |
+| `displayName` | Human-friendly name shown in game.                                     |
+| `author`      | Your name (Discord/Meta whatever, but something we can find you with). |
+| `url`         | Link to the GitHub repository (`https://github.com/<owner>/<repo>`).   |
 
 ### Example
 
 ```json
 {
   "name": "anotheraxiom.example",
+  "displayName": "Example Script",
   "author": "Another Axiom",
   "url": "https://github.com/AA-Franz/OD_ExampleCameraScript"
 }
