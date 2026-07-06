@@ -3,28 +3,45 @@ name: Check Formatting and Schema
 on:
   push:
   pull_request:
-    branches: main
+    branches:
+      - main
 
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+        uses: actions/setup-node@v6
 
       - name: Install dependencies
         run: npm install
 
       - name: Check JSON formatting
+        id: format
         run: npx prettier --check .
+        continue-on-error: true
+
+      - name: Annotate formatting failure
+        if: steps.format.outcome == 'failure'
+        run: echo "::error::Formatting check failed. Run 'npm run format' locally and commit the changes."
 
       - name: Validate registry.json against registry.schema.json
+        id: schema
         run: npx ajv-cli validate -s src/registry.schema.json -d registry.json
+        continue-on-error: true
+
+      - name: Annotate schema validation failure
+        if: steps.schema.outcome == 'failure'
+        run: echo "::error file=registry.json::registry.json does not match src/registry.schema.json. See the job log for details."
 
       - name: Validate registry entries (uniqueness, reachable repos, package.json schema)
+        id: validate
         run: npm run validate
+        continue-on-error: true
+
+      - name: Fail job if any check failed
+        if: steps.format.outcome == 'failure' || steps.schema.outcome == 'failure' || steps.validate.outcome == 'failure'
+        run: exit 1
