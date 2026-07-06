@@ -24,6 +24,12 @@
       "displayName": "Edit Leveler",
       "author": "Witherr",
       "url": "https://github.com/w-itherr/Edit-Leveler"
+    },
+    {
+      "name": "pub.driftvision",
+      "displayName": "Drift Vision",
+      "author": "Pub | Ayzon",
+      "url": "https://github.com/Notnips/OD_DriftVision"
     }
   ]
 }
