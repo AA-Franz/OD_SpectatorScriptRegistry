@@ -1,7 +1,6 @@
 name: Check Formatting and Schema
 
 on:
-  push:
   pull_request:
     branches:
       - main
