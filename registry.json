@@ -2,10 +2,28 @@
   "$schema": "./src/registry.schema.json",
   "scripts": [
     {
-      "name": "anotheraxiom.example",
-      "displayName": "Example Script",
-      "author": "Another Axiom",
-      "url": "https://github.com/AA-Franz/OD_ExampleCameraScript"
+      "name": "dennssen.followpluss",
+      "displayName": "Follow Pluss",
+      "author": "Dennssen",
+      "url": "https://github.com/dennssen/Follow-Plus"
+    },
+    {
+      "name": "donnssen.caster",
+      "displayName": "Caster Camera",
+      "author": "Dennssen",
+      "url": "https://github.com/dennssen/CasterCamera"
+    },
+    {
+      "name": "lovelyylayna.replayutilities",
+      "displayName": "Layna's Bulk-Replay Utilities",
+      "author": "LovelyyLayna",
+      "url": "https://github.com/lovelyylayna/Replay-Utilities-for-Orion-Drift"
+    },
+    {
+      "name": "witherr.editleveler",
+      "displayName": "Edit Leveler",
+      "author": "Witherr",
+      "url": "https://github.com/w-itherr/Edit-Leveler"
     }
   ]
 }
