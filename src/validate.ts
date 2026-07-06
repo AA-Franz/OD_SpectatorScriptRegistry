@@ -25,7 +25,11 @@ async function main() {
   if (errors.length > 0) {
     console.error(`Registry validation failed:\n`);
     for (const error of errors) {
-      console.error(`  - ${error}`);
+      if (process.env.GITHUB_ACTIONS === "true") {
+        console.log(`::error file=registry.json::${error}`);
+      } else {
+        console.error(`  - ${error}`);
+      }
     }
     process.exit(1);
   }
