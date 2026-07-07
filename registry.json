@@ -30,6 +30,12 @@
       "displayName": "Drift Vision",
       "author": "Pub | Ayzon",
       "url": "https://github.com/Notnips/OD_DriftVision"
+    },
+    {
+      "name": "glowmonster.advancedanimator",
+      "displayName": "Advanced Animator",
+      "author": "glowmonster",
+      "url": "https://github.com/glowmonster-goated/OD_AdvancedAnimator"
     }
   ]
 }
